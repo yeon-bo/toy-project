@@ -1,0 +1,33 @@
+/* 버튼 */
+.btn {}
+
+/* layout */
+body {}
+
+.wrapper {
+  width: 375px;
+  height: 812px;
+  margin: 20px auto;
+  background-color: #eee;
+}
+
+/* HEADER layout */
+header {
+  width: 327px;
+  height: 43px;
+  margin-top: 56px;
+}
+header a {}
+header img {}
+header h1 {}
+header .btn-cont {}
+header .btn-cont .btn-qr {}
+header .btn-cont .btn-search {}
+
+
+.account-section {}
+.account-section .account-cont {}
+.account-section .account-cont strong {}
+.account-section aside {}
+
+.spend-section {}
