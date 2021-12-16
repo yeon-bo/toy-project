@@ -1,6 +1,7 @@
 /* 버튼 */
 .btn {}
 
+
 /* layout */
 body {}
 
@@ -10,6 +11,7 @@ body {}
   margin: 20px auto;
   background-color: #eee;
 }
+
 
 /* HEADER layout */
 header {
@@ -25,9 +27,42 @@ header .btn-cont .btn-qr {}
 header .btn-cont .btn-search {}
 
 
+/* ACCOUNT-SECTION layout */
 .account-section {}
-.account-section .account-cont {}
-.account-section .account-cont strong {}
+.account-cont {}
+.account-cont strong {}
+.account-cont .btn-send {}
+.account-cont .progress-cont {}
+.account-cont .progress-cont .bar {}
+.account-cont .progress-cont .bar .progress {}
+.account-cont .progress-cont .bar .limit {}
+.account-cont span {}
+
 .account-section aside {}
 
+
+/* SPEND-SECTION layout */
 .spend-section {}
+.save-cont {}
+.save-cont .save-list {}
+.save-cont .save-list .save-bar {}
+.save-cont .save-list .save-bar .save-progress {}
+.save-cont .save-list .save-bar .save-name {}
+.save-cont .save-list .save-bar .save-money {}
+.save-cont .save-add {}
+.save-cont .save-add .btn-add {}
+.save-cont .save-add .btn-add span {}
+
+.day-cont {}
+.day-cont .day-list {}
+.day-cont .day-list .day {}
+.day-cont .day-list .total {}
+.day-cont .day-list .spend-cont {}
+.day-cont .day-list .spend-cont .spend-list {}
+.day-cont .day-list .spend-cont .spend-list .spend-title {}
+.day-cont .day-list .spend-cont .spend-list .spend-cost {}
+
+nav {}
+nav ul {}
+nav ul li {}
+
