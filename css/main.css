@@ -1,5 +1,7 @@
 /* 버튼 */
-.btn {}
+.btn {
+  
+}
 
 
 /* layout */
@@ -7,62 +9,364 @@ body {}
 
 .wrapper {
   width: 375px;
-  height: 812px;
-  margin: 20px auto;
-  background-color: #eee;
+  height: 736px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #EEECE5;
 }
 
 
 /* HEADER layout */
-header {
+.account {
+}
+.accout header {
   width: 327px;
   height: 43px;
   margin-top: 56px;
+  margin-left: 27px;
+  float: left;
 }
-header a {}
-header img {}
-header h1 {}
-header .btn-cont {}
-header .btn-cont .btn-qr {}
-header .btn-cont .btn-search {}
+header a {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+}
+header a img {
+  width: 100%;
+}
+header h1 {
+  display: inline-block;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-left: 85px;
+  margin-top: 8px;
+}
+header .btn-cont {
+  display: inline-block;
+  float: right;
+  height: 24px;
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+}
+header .btn-cont .btn-qr {
+  margin-right: 18px;
+  width: 24px;
+  height: 21px;
+}
+header .btn-cont .btn-qr>img {
+  width: 100%;
+}
+header .btn-cont .btn-search {
+  width: 24px;
+  height: 24px;
+}
+header .btn-cont .btn-search>img {
+  width: 100%;
+}
 
 
 /* ACCOUNT-SECTION layout */
-.account-section {}
-.account-cont {}
-.account-cont strong {}
-.account-cont .btn-send {}
-.account-cont .progress-cont {}
-.account-cont .progress-cont .bar {}
-.account-cont .progress-cont .bar .progress {}
-.account-cont .progress-cont .bar .limit {}
-.account-cont span {}
+.account-section {
+  float: left;
+  position: relative;
+}
+.account-cont {
+  background-color: #fff;
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+  position: absolute;
+  width: 279px;
+  height: 155px;
+  padding: 14px;
+  border-radius: 12px;
+  left: 48px;
+  top: 33px;
+  box-sizing: border-box;
+}
+.account-cont .accoun-num {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #858585;
+  margin-left: 61px;
+}
+.account-cont .btn-send {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  float: right;
+  right: 17px;
+}
+.account-cont .accoun-money {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 2px;
+  position: absolute;
+  width: 279px;
+  text-align: center;
+  top: 51px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.account-cont .accoun-money strong {
+  font-size: 24px;
+  line-height: 35px;
+}
+.account-cont .progress-cont {
+  position: absolute;
+  top: 110px;
+  left: 32px;
+}
+.account-cont .progress-cont .bar {
+  width: 202px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #C4C4C4;
+}
+.account-cont .progress-cont .bar .progress {
+  width: 50%;
+  height: 6px;
+  font-size: 0;
+  background-color: #FFDB4C;
+  position: relative;
+}
+.account-cont .progress-cont .bar::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: #FF5F00;
+}
+.account-cont .progress-cont .btn-manage {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  right: -26px;
+  bottom: 0;
+}
+.account-cont .progress-cont .btn-manage img {
+  width: 100%;
+}
+.account-cont .account-desc {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  position: absolute;
+  width: 279px;
+  text-align: center;
+  bottom: 6px;
+  color: #858585;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-.account-section aside {}
+.account-section aside {
+  margin-top: 212px;
+  padding-left: 43px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.account-section aside {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
 
 
 /* SPEND-SECTION layout */
-.spend-section {}
-.save-cont {}
-.save-cont .save-list {}
-.save-cont .save-list .save-bar {}
-.save-cont .save-list .save-bar .save-progress {}
-.save-cont .save-list .save-bar .save-name {}
-.save-cont .save-list .save-bar .save-money {}
-.save-cont .save-add {}
-.save-cont .save-add .btn-add {}
-.save-cont .save-add .btn-add span {}
+.spend-section {
+  width: 375px;
+  height: 680px;
+  position: relative;
+  top: 353px;
+  background-color: #F5F5F5;
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0 0;
+}
+.spend-section .dragbar {
+  width: 48px;
+  height: 2px;
+  position: absolute;
+  left: 162px;
+  top: 4px;
+  background-color: #cdcdcd;
+}
 
-.day-cont {}
-.day-cont .day-list {}
-.day-cont .day-list .day {}
-.day-cont .day-list .total {}
-.day-cont .day-list .spend-cont {}
-.day-cont .day-list .spend-cont .spend-list {}
-.day-cont .day-list .spend-cont .spend-list .spend-title {}
-.day-cont .day-list .spend-cont .spend-list .spend-cost {}
+.spend-section .save-cont {
+  position: absolute;
+  width: 308px;
+  height: 49px;
+  left: 30px;
+  top: 23px;
+  display: flex;
+  overflow: hidden;
+}
+.save-cont .save-list {
+  display: flex;
+}
+.save-cont .save-list .save-bar {
+  width: 162px;
+  height: 47px;
+  background: #dadada;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.save-cont .save-list .save-bar+.save-bar {
+  margin-left: 13px;
+}
+.save-cont .save-list .save-bar .save-progress {
+  height: 47px;
+  width: 70%;
+  background: #ff5f00;
+}
+.save-cont .save-list .save-bar .save-name {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #fff;
+  top: 5px;
+  left: 13px;
+}
+.save-cont .save-list .save-bar .save-money {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #fff;
+  top: 22px;
+  left: 13px;
+}
+.save-cont .save-add {
+  margin-left: 16px;
+}
+.save-cont .save-add .btn-add {
+  height: 24px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+.save-cont .save-add .btn-add span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #ff5f00;
+}
+.save-cont .save-add .btn-add img {
+  height: 100%;
+  margin-right: 6px;
+}
 
-nav {}
-nav ul {}
-nav ul li {}
+.day-cont {
+  position: absolute;
+  width: 302px;
+  top: 88px;
+  left: 36px;
+}
+.day-cont .day-list {
+  display: inline-block;
+}
+.day-cont .day-list+.day-list {
+  margin-top: 38px;
+}
+.day-cont .day-list .day {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.day-cont .day-list .total {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  float: right;
+  color: #b4b4b4;
+}
+.day-cont .day-list .spend-cout {
+  top: 29px;
+}
+.day-cont .day-list .spend-cout .spend-list {
+  width: 302px;
+  padding: 8px 0 7px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+}
+.day-cont .day-list .spend-cout .spend-list .spend-title {
+  font-size: 18px;
+  font-weight: 350;
+  color: #444;
+  line-height: 26px;
+}
+.day-cont .day-list .spend-cout .spend-list .spend-cost {
+  font-size: 18px;
+  font-weight: 300;
+  color: #444;
+  line-height: 26px;
+}
+.day-cont .day-list .spend-cout .deposit .spend-cost {
+  color: #FF5F00;
+}
 
+nav {
+  position: fixed;
+  top: 736px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 76px;
+  background: linear-Gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+}
+nav .navwrapper {
+  display: flex;
+  padding: 0 32px 0 46px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+nav .btn-home {
+  width: 23px;
+  height: 20px;
+}
+nav .btn-home img {
+  width: 100%;
+}
+nav .btn-arrow {
+  width: 30px;
+  height: 23px;
+}
+nav .btn-arrow img {
+  width: 100%;
+}
+nav .btn-message {
+  width: 24px;
+  height: 24px;
+}
+nav .btn-message img {
+  width: 100%;
+}
+nav .btn-more {
+  width: 28px;
+  height: 28px;
+}
+nav .btn-more img {
+  width: 95%;
+}
