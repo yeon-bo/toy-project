@@ -5,8 +5,14 @@
 
 
 /* layout */
-body {}
-
+.top-bar {
+  background-color: #ddd;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+}
 .wrapper {
   width: 375px;
   height: 736px;
@@ -14,17 +20,23 @@ body {}
   margin: 0 auto;
   background-color: #EEECE5;
 }
-
+.swiper {
+  display: flex;
+  transition-property: transform;
+}
+.accout {
+  width: 100%;
+}
+/* 넘어가는 spend-section영역 그림자를 지우고 싶은데 overflow:hidden이 안됌 */
 
 /* HEADER layout */
-.account {
-}
-.accout header {
+header {
   width: 327px;
   height: 43px;
   margin-top: 56px;
   margin-left: 27px;
   float: left;
+  position: relative;
 }
 header a {
   display: inline-block;
@@ -40,7 +52,8 @@ header h1 {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
-  margin-left: 85px;
+  left: 50%;
+  transform: translateX(-65%);
   margin-top: 8px;
 }
 header .btn-cont {
@@ -70,7 +83,8 @@ header .btn-cont .btn-search>img {
 
 /* ACCOUNT-SECTION layout */
 .account-section {
-  float: left;
+  width: 327px;
+  display: inline-block;
   position: relative;
 }
 .account-cont {
@@ -81,7 +95,8 @@ header .btn-cont .btn-search>img {
   height: 155px;
   padding: 14px;
   border-radius: 12px;
-  left: 48px;
+  left: 50%;
+  transform: translateX(-41%);
   top: 33px;
   box-sizing: border-box;
 }
@@ -130,15 +145,15 @@ header .btn-cont .btn-search>img {
   width: 50%;
   height: 6px;
   font-size: 0;
-  background-color: #FFDB4C;
+  background-color: #000;
   position: relative;
 }
-.account-cont .progress-cont .bar::after {
+.account-cont .progress-cont .bar .progress::after {
   display: inline-block;
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 0;
   transform: translateY(-50%);
   width: 4px;
   height: 17px;
@@ -168,6 +183,9 @@ header .btn-cont .btn-search>img {
   left: 50%;
   transform: translateX(-50%);
 }
+.account-cont .account-desc span {
+  color: #858585;
+}
 
 .account-section aside {
   margin-top: 212px;
@@ -196,7 +214,7 @@ header .btn-cont .btn-search>img {
   width: 375px;
   height: 680px;
   position: relative;
-  top: 353px;
+  margin-top: 21px;
   background-color: #F5F5F5;
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0 0;
@@ -205,10 +223,13 @@ header .btn-cont .btn-search>img {
   width: 48px;
   height: 2px;
   position: absolute;
-  left: 162px;
-  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
   background-color: #cdcdcd;
+  cursor: pointer;
 }
+
 
 .spend-section .save-cont {
   position: absolute;
@@ -218,6 +239,9 @@ header .btn-cont .btn-search>img {
   top: 23px;
   display: flex;
   overflow: hidden;
+}
+.save-cont .save-contcont {
+  display: flex;
 }
 .save-cont .save-list {
   display: flex;
@@ -235,14 +259,15 @@ header .btn-cont .btn-search>img {
 }
 .save-cont .save-list .save-bar .save-progress {
   height: 47px;
-  width: 70%;
-  background: #ff5f00;
+  width: 0%;
+  background: #fff;
 }
 .save-cont .save-list .save-bar .save-name {
   position: absolute;
   font-size: 12px;
   font-weight: 500;
   line-height: 17px;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
   color: #fff;
   top: 5px;
   left: 13px;
@@ -258,6 +283,7 @@ header .btn-cont .btn-search>img {
 }
 .save-cont .save-add {
   margin-left: 16px;
+  width: 100px;
 }
 .save-cont .save-add .btn-add {
   height: 24px;
@@ -334,13 +360,11 @@ nav {
   width: 375px;
   height: 76px;
   background: linear-Gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
-}
-nav .navwrapper {
   display: flex;
   padding: 0 32px 0 46px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
+  box-sizing: border-box;
 }
 nav .btn-home {
   width: 23px;
