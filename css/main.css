@@ -277,6 +277,7 @@ header .btn-cont .btn-search>img {
   font-size: 12px;
   font-weight: 500;
   line-height: 17px;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
   color: #fff;
   top: 22px;
   left: 13px;
@@ -302,18 +303,20 @@ header .btn-cont .btn-search>img {
   margin-right: 6px;
 }
 
-.day-cont {
+.day-contcont {
   position: absolute;
   width: 302px;
   top: 88px;
   left: 36px;
+  overflow: hidden;
+}
+.day-cont {
+  overflow: hidden;
 }
 .day-cont .day-list {
   display: inline-block;
 }
-.day-cont .day-list+.day-list {
-  margin-top: 38px;
-}
+
 .day-cont .day-list .day {
   font-size: 14px;
   font-weight: 700;
@@ -335,6 +338,9 @@ header .btn-cont .btn-search>img {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #dcdcdc;
+}
+.day-cont .day-list .spend-cout:last-child {
+  margin-bottom: 38px;
 }
 .day-cont .day-list .spend-cout .spend-list .spend-title {
   font-size: 18px;
